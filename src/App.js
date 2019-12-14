@@ -4,30 +4,38 @@ import Wrapper from "./components/Wrapper";
 import cats from "./cats.json";
 
 class App extends Component {
-  // Setting this.state.cats to the cats json array
+  // Setting this.state.cats to the cats json array, and initial game stats
   state = {
     cats,
     score: 0,
     highScore: 0,
-    message: "",
+    message: "To win, click only unique images",
     clickedIds: []
   };
 
+  //on click function to reorder cats, calculate and display scores, and show messages
   reorderCats = id => {
     let clickedIds = this.state.clickedIds;
+    let highScore = this.state.highScore;
+    let score = this.state.score;
 
+    //if the player clicks the same cat image twice
     if (clickedIds.includes(id)) {
       this.setState({
         clickedIds: [],
         score: 0,
-        status: "Game Over! You lost."
+        message: "Game Over! You lost."
       });
+      //if the player lost, adjust their highscore
+      if (score > highScore) {
+        this.setState({ highScore: score });
+      }
       return;
+      // if the player clicks on a unique image, increase their score (set to the length of clickedIds)
     } else {
       clickedIds.push(id);
-      //increase score?
 
-      if (clickedIds.length === 3) {
+      if (clickedIds.length === cats.length) {
         this.setState({
           score: 3,
           message: "You won! Great job!",
@@ -39,7 +47,7 @@ class App extends Component {
         cats,
         clickedIds,
         score: clickedIds.length,
-        status: " "
+        message: "To win, click only unique images"
       });
     }
 
@@ -54,14 +62,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar></Navbar> */}
-
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <h1 className="nav-item navbar-brand">Memory Game</h1>
           <span className="navbar-text directions ml-auto">
-            Try not to click the same image twice!
+            {this.state.message}
           </span>
-          <span>{this.state.message}</span>
           <span className="navbar-text scores ml-auto">
             Score: {this.state.score} | Top Score: {this.state.highScore}
           </span>
