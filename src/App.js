@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
+import Footer from "./components/Footer";
 import cats from "./cats.json";
 
 class App extends Component {
@@ -82,6 +83,9 @@ class App extends Component {
             />
           ))}
         </Wrapper>
+        <Footer>
+          <small>Copyright &copy; Sarah Arnold</small>
+        </Footer>
       </div>
     );
   }
