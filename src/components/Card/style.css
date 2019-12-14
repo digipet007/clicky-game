@@ -18,8 +18,8 @@
 }
 
 .card:hover {
-  transform: scale(1.15);
-  box-shadow: 0 3px 6px rgba(153, 153, 153, 0.239), 0 3px 6px #999;
+  transform: scale(1.11);
+  box-shadow: 0 3px 6px rgba(66, 66, 66, 0.239), 0 4px 6px #999;
   background:rgb(211, 250, 255);
   }
 
