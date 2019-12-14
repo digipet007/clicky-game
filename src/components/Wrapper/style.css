@@ -1,12 +1,40 @@
 .wrapper {
-  padding-top: 50px;
+  padding-top: 20px;
   background: rgb(202, 188, 226);
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   justify-content: space-around;
   align-content: flex-start;
   /* overflow: auto; */
+}
+
+
+@media only screen and (min-width: 1267px) {
+  .wrapper{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media only screen and (min-width: 1111px) and (max-width: 1266px) {
+  .wrapper{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1110) {
+  .wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }
