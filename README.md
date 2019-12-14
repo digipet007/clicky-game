@@ -4,7 +4,7 @@
 
 Welcome to the kitten-themed Clicky memory game! Click on only unique images and beat your high score. Click on the same image twice and loose the game. It was built with React Js.
 
-![demo](demo/ntyscraper2.gif)
+![demo](public/demo/clicky.gif)
 
 For a demo of the app, visit: <https://limitless-reaches-64367.herokuapp.com>
 
