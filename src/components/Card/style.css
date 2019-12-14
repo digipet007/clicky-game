@@ -1,8 +1,8 @@
 .card {
   border-radius: 2px;
-  height: 200px;
-  width: 200px;
-  margin: .5rem;
+  height: 199px;
+  width: 199px;
+  margin: .4rem;
   position: relative;
   box-shadow: 0 3px 6px rgba(153, 153, 153, 0.589), 0 3px 6px #999;
   overflow: hidden;
@@ -18,7 +18,7 @@
 }
 
 .card:hover {
-  transform: scale(1.11);
+  transform: scale(1.05);
   box-shadow: 0 3px 6px rgba(66, 66, 66, 0.239), 0 4px 6px #999;
   background:rgb(211, 250, 255);
   }
