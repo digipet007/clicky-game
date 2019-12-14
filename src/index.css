@@ -11,6 +11,7 @@ html, body, #root {
 
 .navbar {
   margin-bottom: 0;
+  padding-bottom: 0;
   box-shadow: 0 3px 6px rgba(139, 112, 170, 0.404), 0 7px 6px #999;
 }
 
