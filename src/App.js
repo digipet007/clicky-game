@@ -67,6 +67,12 @@ class App extends Component {
         status: " "
       });
     }
+
+    //shuffle array order via the Fisher-Yates Shuffle https://bost.ocks.org/mike/shuffle/
+    for (let i = cats.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [cats[i], cats[j]] = [cats[j], cats[i]];
+    }
   };
 
   // Map over this.state.cats and render a Card component for each cat object
