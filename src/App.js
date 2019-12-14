@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
-import Navbar from "./components/Navbar";
 import cats from "./cats.json";
 
 class App extends Component {
@@ -14,31 +13,7 @@ class App extends Component {
     clickedIds: []
   };
 
-  // shuffle = array => {
-  //   var m = array.length,
-  //     t,
-  //     i;
-
-  //   // While there remain elements to shuffle…
-  //   while (m) {
-  //     // Pick a remaining element…
-  //     i = Math.floor(Math.random() * m--);
-
-  //     // And swap it with the current element.
-  //     t = array[m].id;
-  //     array[m] = array[i].id;
-  //     array[i].id = t;
-  //   }
-
-  //   return array;
-  // };
-
   reorderCats = id => {
-    // const cats = this.state.cats.filter(cat => cat.id !== id);
-    // const catArray = this.state.cats;
-    // const cats = shuffle(catArray);
-    // Set this.state.cats equal to the new friends array
-    // this.setState({ cats });
     let clickedIds = this.state.clickedIds;
 
     if (clickedIds.includes(id)) {
